@@ -1,53 +1,76 @@
 {% extends 'header.html' %}
 {% block content  %}
 {% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title> Login Form with light button  </title>
+    <link rel="stylesheet" href="{% static 'assets/scss/login.css' %}">
 
-<!DOCTYPE HTML>
-<html>
-<head>
-  <title>Register Form</title>
-</head>
-<body>
- <form>
-  <table>
-   <tr>
-    <td>Name :</td>
-    <td><input type="text"></td>
-   </tr>
-   <tr>
-    <td>Password :</td>
-    <td><input type="password"></td>
-   </tr>
-   <tr>
-    <td>Gender :</td>
-    <td>
-     <input type="radio" name="Gender"> Male
-     <input type="radio" name="Gender"> Female
-    </td>
-   </tr>
-   <tr>
-    <td>Email :</td>
-    <td><input type="email"></td>
-   </tr>
-   <tr>
-    <td>Phone no :</td>
-    <td>
-     <select>
-      <option>977</option>
-      <option>978</option>
-      <option>979</option>
-      <option>973</option>
-      <option>972</option>
-      <option>974</option>
-     </select>
-     <input type="phone">
-    </td>
-   </tr>
-   <tr>
-    <td><input type="submit" value="Submit"></td>
-   </tr>
-  </table>
- </form>
-</body>
+  </head>
+  <body>
+    <div class="login-box">
+      <h2>Sign Up</h2>
+      <form>
+        <div class="user-box">
+          <input type="text" name="fname" required="">
+          <label>First Name</label>
+        </div>
+        <div class="user-box">
+          <input type="text" name="lname" required="">
+          <label>Last Name</label>
+        </div>
+        <div class="user-box">
+          <input type="text" name="email" required="">
+          <label>Email</label>
+        </div>
+
+        {% comment %} <div class="user-box">
+          <label>Gender</label>
+          <input type="radio" name="gender" value="male"> Male
+          <input type="radio" name="gender" value="female"> Female
+          
+        </div>
+
+        <div class="user-box">
+          <input type="date" name="mobile" required="">
+          <br>
+          <label>Date of birth</label>
+        </div> {% endcomment %}
+
+        <div class="user-box">
+          <input type="phone" name="mobile" required="">
+          <label>Mobile</label>
+        </div>
+        <div class="user-box">
+          <textarea name="address" cols="30" rows="7" class="form-control" style="height:200px"required=""></textarea>
+          <label>Address</label>
+        </div>
+        <div class="user-box">
+          <input type="password" name="password" required="">
+          <label>Password</label>
+        </div>
+        <div class="user-box">
+          <input type="password" name="cpassword" required="">
+          <label>Confirm Password</label>
+        </div>
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Submit
+        </a>
+      </form>
+    </div>
+
+  </body>
 </html>
-{% endblock %}
+
+{% endblock  %}
+
+
+
+
+
